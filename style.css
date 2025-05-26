@@ -1,0 +1,39 @@
+/* 
+  === BATTLE BEANZ OS: DISPLAY SCHEMA === 
+  File: style.css
+  Ver: 0x01A
+*/
+
+/* :: IMPORT EXTERNAL FONT FROM NET NODE_2P :: */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* :: SYSTEM RAM: BODY INIT BLOCK :: */
+body {
+  margin: 0;
+  background: black;
+  color: #00ff00; /* GREEN SCREEN CORE: classic CRT glow */
+  font-family: 'Press Start 2P', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* :: VRAM SECTOR A1: SCREEN WRAPPER :: */
+.screen {
+  text-align: center;
+  animation: flicker 0.15s infinite; /* Simulated flicker, matches 60Hz refresh illusion */
+}
+
+/* :: TITLE MEMORY REGISTER WRITE :: */
+.title {
+  font-size: 2em;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Glow Amplification */
+}
+
+/* :: DEF FX: CRT FLICKER GHOSTING :: */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}
